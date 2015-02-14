@@ -16,5 +16,14 @@
     "audio"
   ],
   "author": "Christian Nilsson <christian@klamby.com> (http://klamby.com/)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.4.3",
+    "reactify": "^1.0.0"
+  },
+  "dependencies": {
+    "react": "^0.12.2"
+  }
 }
