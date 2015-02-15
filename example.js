@@ -9,9 +9,6 @@ request.addEventListener('load', function () {
   var context = new (window.AudioContext || window.webkitAudioContext)();
 
   context.decodeAudioData(request.response, function (buffer) {
-    var source = context.createBufferSource();
-    source.buffer = buffer;
-
     React.render(
         <Waveform buffer={buffer} width={720} color="cadetblue" />,
         document.getElementById('waveform')
