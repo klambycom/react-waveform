@@ -13,7 +13,7 @@ request.addEventListener('load', function () {
     source.buffer = buffer;
 
     React.render(
-        <Waveform buffer={buffer} />,
+        <Waveform buffer={buffer} width={500} />,
         document.getElementById('waveform')
         );
   });
