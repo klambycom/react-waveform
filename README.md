@@ -6,6 +6,14 @@
   <img src="https://raw.githubusercontent.com/klambycom/react-waveform/master/waveform.png">
 </p>
 
+
+## Install
+
+```sh
+npm install react-waveform
+```
+
+
 ## Props
 
 * **buffer** AudioBuffer
@@ -38,3 +46,8 @@ request.addEventListener('load', function () {
 
 request.send();
 ```
+
+
+## License
+
+MIT
