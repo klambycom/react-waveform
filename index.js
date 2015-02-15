@@ -19,13 +19,18 @@ module.exports = React.createClass({
     var step = Math.ceil(channelData.length / width);
 
     var ctx = this.refs.canvas.getDOMNode().getContext('2d');
+    this.draw(width, step, middle, channelData, ctx);
 
+    //ctx.fillStyle = 'green';
+    //ctx.fillRect(10, 10, 100, 100);
+  },
+  draw: function (width, step, middle, data, ctx) {
     for (var i = 0; i < width; i += 1) {
       var min = 1.0;
       var max = -1.0;
 
       for (var j = 0; j < step; j += 1) {
-        var datum = channelData[(i * step) + j];
+        var datum = data[(i * step) + j];
 
         if (datum < min) {
           min = datum;
@@ -36,11 +41,6 @@ module.exports = React.createClass({
         ctx.fillRect(i, (1 + min) * middle, 1, Math.max(1, (max - min) * middle));
       }
     }
-
-    //ctx.fillStyle = 'green';
-    //ctx.fillRect(10, 10, 100, 100);
-  },
-  draw: function () {
   },
   render: function () {
     return (
