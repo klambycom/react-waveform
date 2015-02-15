@@ -1,6 +1,6 @@
 # rect-waveform
 
-Generates waveform using Web Audio API.
+> Generates waveform using Web Audio API.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/klambycom/react-waveform/master/waveform.png">

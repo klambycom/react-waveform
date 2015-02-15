@@ -1,14 +1,14 @@
 {
   "name": "react-waveform",
-  "version": "0.0.1",
-  "description": "TODO",
+  "version": "0.1.0",
+  "description": "Generates waveform using Web Audio API.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "todo"
+    "url": "https://github.com/klambycom/react-waveform.git"
   },
   "keywords": [
     "react",
