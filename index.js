@@ -2,13 +2,12 @@ var React = require('react');
 
 module.exports = React.createClass({
   getDefaultProps: function () {
-    // zoom == pixels per second if int
-    // zoom == zoom if string (eg. 2x)
     return {
       buffer: null,
       width: 500,
       height: 100,
-      zoom: 1
+      zoom: 1,
+      color: 'black'
     };
   },
   componentDidMount: function () {
@@ -19,10 +18,8 @@ module.exports = React.createClass({
     var step = Math.ceil(channelData.length / width);
 
     var ctx = this.refs.canvas.getDOMNode().getContext('2d');
+    ctx.fillStyle = this.props.color;
     this.draw(width, step, middle, channelData, ctx);
-
-    //ctx.fillStyle = 'green';
-    //ctx.fillRect(10, 10, 100, 100);
   },
   draw: function (width, step, middle, data, ctx) {
     for (var i = 0; i < width; i += 1) {
@@ -44,12 +41,11 @@ module.exports = React.createClass({
   },
   render: function () {
     return (
-        <div className="waveform">
-          <canvas
-            ref="canvas"
-            width={this.props.width * this.props.zoom}
-            height={this.props.height}></canvas>
-        </div>
+        <canvas
+          ref="canvas"
+          className="waveform"
+          width={this.props.width * this.props.zoom}
+          height={this.props.height}></canvas>
         );
   }
 });
