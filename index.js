@@ -11,6 +11,16 @@ module.exports = React.createClass({
       onDone: null
     };
   },
+
+  propTypes: {
+    buffer: React.PropTypes.object.isRequired,
+    width: React.PropTypes.number,
+    height: React.PropTypes.number,
+    zoom: React.PropTypes.number,
+    color: React.PropTypes.string,
+    onDone: React.PropTypes.func
+  },
+
   componentDidMount: function () {
     var width = this.props.width * this.props.zoom;
     var middle = this.props.height / 2;
@@ -24,6 +34,7 @@ module.exports = React.createClass({
 
     if (this.props.onDone) { this.props.onDone(); }
   },
+
   draw: function (width, step, middle, data, ctx) {
     for (var i = 0; i < width; i += 1) {
       var min = 1.0;
@@ -42,6 +53,7 @@ module.exports = React.createClass({
       }
     }
   },
+
   render: function () {
     return (
         <canvas

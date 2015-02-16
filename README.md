@@ -17,9 +17,9 @@ npm install react-waveform
 ## Props
 
 * **buffer** AudioBuffer
-* **width** Integer
-* **height** Integer
-* **zoom** Integer
+* **width** Number
+* **height** Number
+* **zoom** Number
 * **color** String
 * **onDone** Function
 
