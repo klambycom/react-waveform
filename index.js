@@ -1,6 +1,8 @@
 var React = require('react');
 
 module.exports = React.createClass({
+  displayName: 'Waveform',
+
   getDefaultProps: function () {
     return {
       buffer: null,
