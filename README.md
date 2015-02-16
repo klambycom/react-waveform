@@ -21,6 +21,7 @@ npm install react-waveform
 * **height** Integer
 * **zoom** Integer
 * **color** String
+* **onDone** Function
 
 
 ## Example

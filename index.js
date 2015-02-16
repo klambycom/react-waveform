@@ -7,7 +7,8 @@ module.exports = React.createClass({
       width: 500,
       height: 100,
       zoom: 1,
-      color: 'black'
+      color: 'black',
+      onDone: null
     };
   },
   componentDidMount: function () {
@@ -20,6 +21,8 @@ module.exports = React.createClass({
     var ctx = this.refs.canvas.getDOMNode().getContext('2d');
     ctx.fillStyle = this.props.color;
     this.draw(width, step, middle, channelData, ctx);
+
+    if (this.props.onDone) { this.props.onDone(); }
   },
   draw: function (width, step, middle, data, ctx) {
     for (var i = 0; i < width; i += 1) {
@@ -43,7 +46,6 @@ module.exports = React.createClass({
     return (
         <canvas
           ref="canvas"
-          className="waveform"
           width={this.props.width * this.props.zoom}
           height={this.props.height}></canvas>
         );
