@@ -1,4 +1,4 @@
-# rect-waveform
+# react-waveform
 
 > Generates waveform using Web Audio API.
 
